@@ -12,9 +12,8 @@
 @implementation ListInteractor (ViewOutput)
 
 - (void)onViewReady {
-    [self.objectsLoadingService loadObjectsWithCompletion:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        NSLog(@"%@", objects);
-    }];
+    [self startDataTracking];
+    [self loadData];
 }
 
 @end

@@ -10,4 +10,8 @@
 
 @implementation ListTableViewController (ViewInput)
 
+- (void)consumeTransactionBatch:(CacheTransactionBatch *)batch {
+    [self processTransactionBatch:batch];
+}
+
 @end

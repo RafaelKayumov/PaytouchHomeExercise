@@ -7,81 +7,79 @@
 //
 
 #import "ListTableViewController.h"
+#import "CacheTransaction.h"
+#import "CacheTransactionBatch.h"
+#import "FlickrObjectPlain.h"
 
 @interface ListTableViewController ()
+
+@property (nonatomic, strong) NSMutableArray<FlickrObjectPlain *> *plainObjects;
 
 @end
 
 @implementation ListTableViewController
 
+#pragma mark - Properties
+
+- (NSMutableArray<FlickrObjectPlain *> *)plainObjects {
+    if (!_plainObjects) {
+        _plainObjects = @[].mutableCopy;
+    }
+
+    return _plainObjects;
+}
+
+#pragma mark - View
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"Cell"];
 
     [self.output onViewReady];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Methods
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+- (void)processTransactionBatch:(CacheTransactionBatch*)batch {
+    [self.tableView beginUpdates];
+
+    NSMutableArray<NSIndexPath*>* updateRows = [NSMutableArray new];
+    NSMutableArray<NSIndexPath*>* deleteRows = [NSMutableArray new];
+    NSMutableArray<NSIndexPath*>* insertRows = [NSMutableArray new];
+
+    for (CacheTransaction* transaction in batch.updateTransactions) {
+        [self.plainObjects replaceObjectAtIndex:transaction.oldIndexPath.row withObject:transaction.object];
+        [updateRows addObject:transaction.oldIndexPath];
+    }
+
+    for (CacheTransaction* transaction in batch.deleteTransactions) {
+        [self.plainObjects removeObjectAtIndex:transaction.oldIndexPath.row];
+        [deleteRows addObject:transaction.oldIndexPath];
+    }
+
+    for (CacheTransaction* transaction in batch.insertTransactions) {
+        [self.plainObjects insertObject:transaction.object atIndex:transaction.updatedIndexPath.row];
+        [insertRows addObject:transaction.updatedIndexPath];
+    }
+
+    [self.tableView reloadRowsAtIndexPaths:updateRows withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView deleteRowsAtIndexPaths:deleteRows withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView insertRowsAtIndexPaths:insertRows withRowAnimation:UITableViewRowAnimationFade];
+
+    [self.tableView endUpdates];
 }
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.plainObjects.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.plainObjects[indexPath.row].title;
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

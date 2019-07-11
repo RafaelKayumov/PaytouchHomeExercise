@@ -1,5 +1,5 @@
 //
-//  AppAssembly.h
+//  NSBundle+Additions.h
 //  PaytouchHomeExercise
 //
 //  Created by Rafael Kayumov on 11/07/2019.
@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class CoreDataStack;
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppAssembly : NSObject
+@interface NSBundle (Additions)
 
-- (instancetype)initWithCoreDataStack:(CoreDataStack *)coreDataStack;
-- (UIViewController *)assembleListModuleAndReturnView;
+@property (nonatomic, readonly) NSString *appName;
 
 @end
 

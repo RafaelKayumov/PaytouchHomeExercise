@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class NetworkingTransport;
 
-typedef void (^FlickrObjectsLoadingCompletion)(NSArray * _Nullable, NSError * _Nullable);
+typedef void (^FlickrObjectsLoadingCompletion)(NSArray<NSDictionary *> * _Nullable, NSError * _Nullable);
 
 @interface FlickrObjectsLoadingService : NSObject
 

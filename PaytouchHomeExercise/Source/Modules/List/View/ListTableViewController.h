@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "ListViewOutput.h"
 
+@class CacheTransactionBatch;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ListTableViewController : UITableViewController
 
 @property (nonatomic, strong) id <ListViewOutput> output;
+
+- (void)processTransactionBatch:(CacheTransactionBatch *)batch;
 
 @end
 

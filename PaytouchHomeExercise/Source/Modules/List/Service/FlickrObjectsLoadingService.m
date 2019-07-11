@@ -11,6 +11,8 @@
 #import "NetworkingRouteProviding.h"
 #import "FlickrObjectsLoadingRoute.h"
 
+NSString *const kItems = @"items";
+
 @interface FlickrObjectsLoadingService()
 
 @property (nonatomic, strong) NetworkingTransport *networkingTransport;
@@ -31,7 +33,11 @@
 - (void)loadObjectsWithCompletion:(FlickrObjectsLoadingCompletion)completion {
     FlickrObjectsLoadingRoute *route = [[FlickrObjectsLoadingRoute alloc] init];
     self.dataTask = [self.networkingTransport queryRoute:route completion:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        completion(@[data], error);
+        NSError *parsingError;
+        NSDictionary *payloadJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error: &parsingError];
+        NSArray *itemsJSON = payloadJSON[kItems];
+        
+        completion(itemsJSON, error ?: parsingError);
     }];
 }
 

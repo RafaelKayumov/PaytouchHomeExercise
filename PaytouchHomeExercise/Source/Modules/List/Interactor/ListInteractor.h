@@ -10,14 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ListViewInput;
-@class FlickrObjectsLoadingService;
+@protocol ListViewInput, ObjectsFactoryProtocol;
+@class FlickrObjectsLoadingService, CoreDataStack;
 
 @interface ListInteractor : NSObject
 
 @property (nonatomic, strong, readonly) FlickrObjectsLoadingService *objectsLoadingService;
 
-- (instancetype)initWithView:(id <ListViewInput>) listViewInput objectsLoadingService:(FlickrObjectsLoadingService *)objectsLoadingService;
+- (instancetype)initWithView:(id <ListViewInput>) listViewInput
+       objectsLoadingService:(FlickrObjectsLoadingService *)objectsLoadingService
+         plainObjectsFactory:(id<ObjectsFactoryProtocol>)plainObjectsFactory
+               coreDataStack:(CoreDataStack *)coreDataStack;
+- (void)startDataTracking;
+- (void)loadData;
 
 @end
 

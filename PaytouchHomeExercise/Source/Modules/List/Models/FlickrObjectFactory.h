@@ -1,5 +1,5 @@
 //
-//  AppAssembly.h
+//  FlickrObjectFactory.h
 //  PaytouchHomeExercise
 //
 //  Created by Rafael Kayumov on 11/07/2019.
@@ -7,15 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class CoreDataStack;
+#import "ObjectsFactoryProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppAssembly : NSObject
-
-- (instancetype)initWithCoreDataStack:(CoreDataStack *)coreDataStack;
-- (UIViewController *)assembleListModuleAndReturnView;
+@interface FlickrObjectFactory: NSObject<ObjectsFactoryProtocol>
 
 @end
 
