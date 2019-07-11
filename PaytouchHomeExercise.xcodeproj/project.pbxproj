@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		781331AD22D64BD5000473E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331AC22D64BD5000473E5 /* AppDelegate.m */; };
+		781331B622D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 781331B422D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld */; };
+		781331B822D64BD6000473E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781331B722D64BD6000473E5 /* Assets.xcassets */; };
+		781331BB22D64BD6000473E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781331B922D64BD6000473E5 /* LaunchScreen.storyboard */; };
+		781331BE22D64BD6000473E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331BD22D64BD6000473E5 /* main.m */; };
+		781331C822D64BD7000473E5 /* PaytouchHomeExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331C722D64BD7000473E5 /* PaytouchHomeExerciseTests.m */; };
+		781331D322D64BD7000473E5 /* PaytouchHomeExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331D222D64BD7000473E5 /* PaytouchHomeExerciseUITests.m */; };
+		781331F122D7465F000473E5 /* AppAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331F022D7465F000473E5 /* AppAssembly.m */; };
+		781331F422D74AEF000473E5 /* AppCoordinator+SplitViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331F322D74AEF000473E5 /* AppCoordinator+SplitViewControllerDelegate.m */; };
+		781331F722D74B73000473E5 /* AppCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 781331F622D74B73000473E5 /* AppCoordinator.m */; };
+		7813320222D7539C000473E5 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813320122D7539C000473E5 /* ListTableViewController.m */; };
+		7813320622D753F9000473E5 /* ListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813320522D753F9000473E5 /* ListInteractor.m */; };
+		7813321022D75ED9000473E5 /* ListInteractor+ViewOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813320F22D75ED9000473E5 /* ListInteractor+ViewOutput.m */; };
+		7813321322D76053000473E5 /* ListTableViewController+ViewInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813321222D76053000473E5 /* ListTableViewController+ViewInput.m */; };
+		7813321722D7615D000473E5 /* ListInteractor+ModuleInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813321622D7615D000473E5 /* ListInteractor+ModuleInput.m */; };
+		7813321C22D762E6000473E5 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813321B22D762E6000473E5 /* UIViewController+Storyboard.m */; };
+		7813321E22D7642D000473E5 /* ListTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7813321D22D7642D000473E5 /* ListTableViewController.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		781331C422D64BD6000473E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781331A022D64BD5000473E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 781331A722D64BD5000473E5;
+			remoteInfo = PaytouchHomeExercise;
+		};
+		781331CF22D64BD7000473E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781331A022D64BD5000473E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 781331A722D64BD5000473E5;
+			remoteInfo = PaytouchHomeExercise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		781331A822D64BD5000473E5 /* PaytouchHomeExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaytouchHomeExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		781331AB22D64BD5000473E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		781331AC22D64BD5000473E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		781331B522D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PaytouchHomeExercise.xcdatamodel; sourceTree = "<group>"; };
+		781331B722D64BD6000473E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		781331BA22D64BD6000473E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		781331BC22D64BD6000473E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781331BD22D64BD6000473E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		781331C322D64BD6000473E5 /* PaytouchHomeExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaytouchHomeExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781331C722D64BD7000473E5 /* PaytouchHomeExerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaytouchHomeExerciseTests.m; sourceTree = "<group>"; };
+		781331C922D64BD7000473E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781331CE22D64BD7000473E5 /* PaytouchHomeExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaytouchHomeExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781331D222D64BD7000473E5 /* PaytouchHomeExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaytouchHomeExerciseUITests.m; sourceTree = "<group>"; };
+		781331D422D64BD7000473E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781331EF22D7465F000473E5 /* AppAssembly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppAssembly.h; sourceTree = "<group>"; };
+		781331F022D7465F000473E5 /* AppAssembly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppAssembly.m; sourceTree = "<group>"; };
+		781331F222D74ACB000473E5 /* AppCoordinator+SplitViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppCoordinator+SplitViewControllerDelegate.h"; sourceTree = "<group>"; };
+		781331F322D74AEF000473E5 /* AppCoordinator+SplitViewControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppCoordinator+SplitViewControllerDelegate.m"; sourceTree = "<group>"; };
+		781331F522D74B73000473E5 /* AppCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCoordinator.h; sourceTree = "<group>"; };
+		781331F622D74B73000473E5 /* AppCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCoordinator.m; sourceTree = "<group>"; };
+		781331FB22D75019000473E5 /* ListViewInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewInput.h; sourceTree = "<group>"; };
+		781331FC22D75026000473E5 /* ListViewOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewOutput.h; sourceTree = "<group>"; };
+		781331FE22D750BD000473E5 /* ViewOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewOutput.h; sourceTree = "<group>"; };
+		7813320022D7539C000473E5 /* ListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		7813320122D7539C000473E5 /* ListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		7813320422D753F9000473E5 /* ListInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListInteractor.h; sourceTree = "<group>"; };
+		7813320522D753F9000473E5 /* ListInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListInteractor.m; sourceTree = "<group>"; };
+		7813320E22D75ED9000473E5 /* ListInteractor+ViewOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListInteractor+ViewOutput.h"; sourceTree = "<group>"; };
+		7813320F22D75ED9000473E5 /* ListInteractor+ViewOutput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ListInteractor+ViewOutput.m"; sourceTree = "<group>"; };
+		7813321122D76053000473E5 /* ListTableViewController+ViewInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListTableViewController+ViewInput.h"; sourceTree = "<group>"; };
+		7813321222D76053000473E5 /* ListTableViewController+ViewInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ListTableViewController+ViewInput.m"; sourceTree = "<group>"; };
+		7813321422D76146000473E5 /* ListModuleInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListModuleInput.h; sourceTree = "<group>"; };
+		7813321522D7615D000473E5 /* ListInteractor+ModuleInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListInteractor+ModuleInput.h"; sourceTree = "<group>"; };
+		7813321622D7615D000473E5 /* ListInteractor+ModuleInput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ListInteractor+ModuleInput.m"; sourceTree = "<group>"; };
+		7813321A22D762E6000473E5 /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Storyboard.h"; sourceTree = "<group>"; };
+		7813321B22D762E6000473E5 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
+		7813321D22D7642D000473E5 /* ListTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTableViewController.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		781331A522D64BD5000473E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781331C022D64BD6000473E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781331CB22D64BD7000473E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7813319F22D64BD5000473E5 = {
+			isa = PBXGroup;
+			children = (
+				781331AA22D64BD5000473E5 /* PaytouchHomeExercise */,
+				781331C622D64BD7000473E5 /* PaytouchHomeExerciseTests */,
+				781331D122D64BD7000473E5 /* PaytouchHomeExerciseUITests */,
+				781331A922D64BD5000473E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		781331A922D64BD5000473E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				781331A822D64BD5000473E5 /* PaytouchHomeExercise.app */,
+				781331C322D64BD6000473E5 /* PaytouchHomeExerciseTests.xctest */,
+				781331CE22D64BD7000473E5 /* PaytouchHomeExerciseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		781331AA22D64BD5000473E5 /* PaytouchHomeExercise */ = {
+			isa = PBXGroup;
+			children = (
+				781331E022D64C2F000473E5 /* Source */,
+				781331E622D64CED000473E5 /* DataModel */,
+				781331E522D64C91000473E5 /* Assets */,
+				781331E122D64C39000473E5 /* Supporting-files */,
+			);
+			path = PaytouchHomeExercise;
+			sourceTree = "<group>";
+		};
+		781331C622D64BD7000473E5 /* PaytouchHomeExerciseTests */ = {
+			isa = PBXGroup;
+			children = (
+				781331C722D64BD7000473E5 /* PaytouchHomeExerciseTests.m */,
+				781331C922D64BD7000473E5 /* Info.plist */,
+			);
+			path = PaytouchHomeExerciseTests;
+			sourceTree = "<group>";
+		};
+		781331D122D64BD7000473E5 /* PaytouchHomeExerciseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				781331D222D64BD7000473E5 /* PaytouchHomeExerciseUITests.m */,
+				781331D422D64BD7000473E5 /* Info.plist */,
+			);
+			path = PaytouchHomeExerciseUITests;
+			sourceTree = "<group>";
+		};
+		781331E022D64C2F000473E5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				781331E222D64C58000473E5 /* Application */,
+				7813321822D762BB000473E5 /* Common */,
+				781331E422D64C6F000473E5 /* Modules */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		781331E122D64C39000473E5 /* Supporting-files */ = {
+			isa = PBXGroup;
+			children = (
+				781331BC22D64BD6000473E5 /* Info.plist */,
+			);
+			path = "Supporting-files";
+			sourceTree = "<group>";
+		};
+		781331E222D64C58000473E5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				781331EE22D745BF000473E5 /* Assembly */,
+				781331ED22D745B4000473E5 /* Coordinator */,
+				781331BD22D64BD6000473E5 /* main.m */,
+				781331AB22D64BD5000473E5 /* AppDelegate.h */,
+				781331AC22D64BD5000473E5 /* AppDelegate.m */,
+				781331B922D64BD6000473E5 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		781331E322D64C63000473E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				781331FD22D750AE000473E5 /* Protocol */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		781331E422D64C6F000473E5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				781331E322D64C63000473E5 /* Common */,
+				781331F822D74FB0000473E5 /* List */,
+				781331F922D74FB6000473E5 /* Details */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		781331E522D64C91000473E5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				781331B722D64BD6000473E5 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		781331E622D64CED000473E5 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				781331B422D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		781331ED22D745B4000473E5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				781331F522D74B73000473E5 /* AppCoordinator.h */,
+				781331F622D74B73000473E5 /* AppCoordinator.m */,
+				781331F222D74ACB000473E5 /* AppCoordinator+SplitViewControllerDelegate.h */,
+				781331F322D74AEF000473E5 /* AppCoordinator+SplitViewControllerDelegate.m */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		781331EE22D745BF000473E5 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				781331EF22D7465F000473E5 /* AppAssembly.h */,
+				781331F022D7465F000473E5 /* AppAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		781331F822D74FB0000473E5 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				781331FA22D74FDB000473E5 /* Protocol */,
+				7813320322D753C3000473E5 /* Interactor */,
+				781331FF22D751A1000473E5 /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		781331F922D74FB6000473E5 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		781331FA22D74FDB000473E5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				781331FB22D75019000473E5 /* ListViewInput.h */,
+				781331FC22D75026000473E5 /* ListViewOutput.h */,
+				7813321422D76146000473E5 /* ListModuleInput.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		781331FD22D750AE000473E5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				781331FE22D750BD000473E5 /* ViewOutput.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		781331FF22D751A1000473E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7813320022D7539C000473E5 /* ListTableViewController.h */,
+				7813320122D7539C000473E5 /* ListTableViewController.m */,
+				7813321122D76053000473E5 /* ListTableViewController+ViewInput.h */,
+				7813321222D76053000473E5 /* ListTableViewController+ViewInput.m */,
+				7813321D22D7642D000473E5 /* ListTableViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7813320322D753C3000473E5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7813320422D753F9000473E5 /* ListInteractor.h */,
+				7813320522D753F9000473E5 /* ListInteractor.m */,
+				7813320E22D75ED9000473E5 /* ListInteractor+ViewOutput.h */,
+				7813320F22D75ED9000473E5 /* ListInteractor+ViewOutput.m */,
+				7813321522D7615D000473E5 /* ListInteractor+ModuleInput.h */,
+				7813321622D7615D000473E5 /* ListInteractor+ModuleInput.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7813321822D762BB000473E5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7813321922D762D0000473E5 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7813321922D762D0000473E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7813321A22D762E6000473E5 /* UIViewController+Storyboard.h */,
+				7813321B22D762E6000473E5 /* UIViewController+Storyboard.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		781331A722D64BD5000473E5 /* PaytouchHomeExercise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781331D722D64BD7000473E5 /* Build configuration list for PBXNativeTarget "PaytouchHomeExercise" */;
+			buildPhases = (
+				781331A422D64BD5000473E5 /* Sources */,
+				781331A522D64BD5000473E5 /* Frameworks */,
+				781331A622D64BD5000473E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaytouchHomeExercise;
+			productName = PaytouchHomeExercise;
+			productReference = 781331A822D64BD5000473E5 /* PaytouchHomeExercise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		781331C222D64BD6000473E5 /* PaytouchHomeExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781331DA22D64BD7000473E5 /* Build configuration list for PBXNativeTarget "PaytouchHomeExerciseTests" */;
+			buildPhases = (
+				781331BF22D64BD6000473E5 /* Sources */,
+				781331C022D64BD6000473E5 /* Frameworks */,
+				781331C122D64BD6000473E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				781331C522D64BD6000473E5 /* PBXTargetDependency */,
+			);
+			name = PaytouchHomeExerciseTests;
+			productName = PaytouchHomeExerciseTests;
+			productReference = 781331C322D64BD6000473E5 /* PaytouchHomeExerciseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		781331CD22D64BD7000473E5 /* PaytouchHomeExerciseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781331DD22D64BD7000473E5 /* Build configuration list for PBXNativeTarget "PaytouchHomeExerciseUITests" */;
+			buildPhases = (
+				781331CA22D64BD7000473E5 /* Sources */,
+				781331CB22D64BD7000473E5 /* Frameworks */,
+				781331CC22D64BD7000473E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				781331D022D64BD7000473E5 /* PBXTargetDependency */,
+			);
+			name = PaytouchHomeExerciseUITests;
+			productName = PaytouchHomeExerciseUITests;
+			productReference = 781331CE22D64BD7000473E5 /* PaytouchHomeExerciseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		781331A022D64BD5000473E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Rafael Kayumov";
+				TargetAttributes = {
+					781331A722D64BD5000473E5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					781331C222D64BD6000473E5 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 781331A722D64BD5000473E5;
+					};
+					781331CD22D64BD7000473E5 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 781331A722D64BD5000473E5;
+					};
+				};
+			};
+			buildConfigurationList = 781331A322D64BD5000473E5 /* Build configuration list for PBXProject "PaytouchHomeExercise" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7813319F22D64BD5000473E5;
+			productRefGroup = 781331A922D64BD5000473E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				781331A722D64BD5000473E5 /* PaytouchHomeExercise */,
+				781331C222D64BD6000473E5 /* PaytouchHomeExerciseTests */,
+				781331CD22D64BD7000473E5 /* PaytouchHomeExerciseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		781331A622D64BD5000473E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7813321E22D7642D000473E5 /* ListTableViewController.storyboard in Resources */,
+				781331BB22D64BD6000473E5 /* LaunchScreen.storyboard in Resources */,
+				781331B822D64BD6000473E5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781331C122D64BD6000473E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781331CC22D64BD7000473E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		781331A422D64BD5000473E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781331B622D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld in Sources */,
+				781331F722D74B73000473E5 /* AppCoordinator.m in Sources */,
+				781331F122D7465F000473E5 /* AppAssembly.m in Sources */,
+				7813321022D75ED9000473E5 /* ListInteractor+ViewOutput.m in Sources */,
+				781331BE22D64BD6000473E5 /* main.m in Sources */,
+				7813321C22D762E6000473E5 /* UIViewController+Storyboard.m in Sources */,
+				781331F422D74AEF000473E5 /* AppCoordinator+SplitViewControllerDelegate.m in Sources */,
+				7813321722D7615D000473E5 /* ListInteractor+ModuleInput.m in Sources */,
+				7813321322D76053000473E5 /* ListTableViewController+ViewInput.m in Sources */,
+				781331AD22D64BD5000473E5 /* AppDelegate.m in Sources */,
+				7813320622D753F9000473E5 /* ListInteractor.m in Sources */,
+				7813320222D7539C000473E5 /* ListTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781331BF22D64BD6000473E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781331C822D64BD7000473E5 /* PaytouchHomeExerciseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781331CA22D64BD7000473E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781331D322D64BD7000473E5 /* PaytouchHomeExerciseUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		781331C522D64BD6000473E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 781331A722D64BD5000473E5 /* PaytouchHomeExercise */;
+			targetProxy = 781331C422D64BD6000473E5 /* PBXContainerItemProxy */;
+		};
+		781331D022D64BD7000473E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 781331A722D64BD5000473E5 /* PaytouchHomeExercise */;
+			targetProxy = 781331CF22D64BD7000473E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		781331B922D64BD6000473E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				781331BA22D64BD6000473E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		781331D522D64BD7000473E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		781331D622D64BD7000473E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		781331D822D64BD7000473E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/PaytouchHomeExercise/Supporting-files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.PaytouchHomeExercise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		781331D922D64BD7000473E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/PaytouchHomeExercise/Supporting-files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.PaytouchHomeExercise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		781331DB22D64BD7000473E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PaytouchHomeExerciseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.PaytouchHomeExerciseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaytouchHomeExercise.app/PaytouchHomeExercise";
+			};
+			name = Debug;
+		};
+		781331DC22D64BD7000473E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PaytouchHomeExerciseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.PaytouchHomeExerciseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaytouchHomeExercise.app/PaytouchHomeExercise";
+			};
+			name = Release;
+		};
+		781331DE22D64BD7000473E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PaytouchHomeExerciseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.PaytouchHomeExerciseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaytouchHomeExercise;
+			};
+			name = Debug;
+		};
+		781331DF22D64BD7000473E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PaytouchHomeExerciseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Rafael-Kayumov.PaytouchHomeExerciseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PaytouchHomeExercise;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781331A322D64BD5000473E5 /* Build configuration list for PBXProject "PaytouchHomeExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781331D522D64BD7000473E5 /* Debug */,
+				781331D622D64BD7000473E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781331D722D64BD7000473E5 /* Build configuration list for PBXNativeTarget "PaytouchHomeExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781331D822D64BD7000473E5 /* Debug */,
+				781331D922D64BD7000473E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781331DA22D64BD7000473E5 /* Build configuration list for PBXNativeTarget "PaytouchHomeExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781331DB22D64BD7000473E5 /* Debug */,
+				781331DC22D64BD7000473E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781331DD22D64BD7000473E5 /* Build configuration list for PBXNativeTarget "PaytouchHomeExerciseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781331DE22D64BD7000473E5 /* Debug */,
+				781331DF22D64BD7000473E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		781331B422D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				781331B522D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodel */,
+			);
+			currentVersion = 781331B522D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodel */;
+			path = PaytouchHomeExercise.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 781331A022D64BD5000473E5 /* Project object */;
+}
