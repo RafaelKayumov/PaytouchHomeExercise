@@ -24,6 +24,12 @@
 		7813321722D7615D000473E5 /* ListInteractor+ModuleInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813321622D7615D000473E5 /* ListInteractor+ModuleInput.m */; };
 		7813321C22D762E6000473E5 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813321B22D762E6000473E5 /* UIViewController+Storyboard.m */; };
 		7813321E22D7642D000473E5 /* ListTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7813321D22D7642D000473E5 /* ListTableViewController.storyboard */; };
+		7813322222D77165000473E5 /* NetworkingTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322122D77165000473E5 /* NetworkingTransport.m */; };
+		7813322522D77632000473E5 /* NetworkingRouteProviding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322422D77632000473E5 /* NetworkingRouteProviding.m */; };
+		7813322822D77841000473E5 /* NSArray+HOF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322622D77841000473E5 /* NSArray+HOF.m */; };
+		7813322B22D77958000473E5 /* NSDictionary+URLQueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322A22D77958000473E5 /* NSDictionary+URLQueryItem.m */; };
+		7813322F22D77BC6000473E5 /* FlickrObjectsLoadingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322E22D77BC6000473E5 /* FlickrObjectsLoadingService.m */; };
+		7813323222D78382000473E5 /* FlickrObjectsLoadingRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813323122D78382000473E5 /* FlickrObjectsLoadingRoute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,18 @@
 		7813321A22D762E6000473E5 /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Storyboard.h"; sourceTree = "<group>"; };
 		7813321B22D762E6000473E5 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
 		7813321D22D7642D000473E5 /* ListTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListTableViewController.storyboard; sourceTree = "<group>"; };
+		7813322022D77165000473E5 /* NetworkingTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingTransport.h; sourceTree = "<group>"; };
+		7813322122D77165000473E5 /* NetworkingTransport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingTransport.m; sourceTree = "<group>"; };
+		7813322322D77226000473E5 /* NetworkingRouteProviding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingRouteProviding.h; sourceTree = "<group>"; };
+		7813322422D77632000473E5 /* NetworkingRouteProviding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingRouteProviding.m; sourceTree = "<group>"; };
+		7813322622D77841000473E5 /* NSArray+HOF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HOF.m"; sourceTree = "<group>"; };
+		7813322722D77841000473E5 /* NSArray+HOF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HOF.h"; sourceTree = "<group>"; };
+		7813322922D77958000473E5 /* NSDictionary+URLQueryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+URLQueryItem.h"; sourceTree = "<group>"; };
+		7813322A22D77958000473E5 /* NSDictionary+URLQueryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+URLQueryItem.m"; sourceTree = "<group>"; };
+		7813322D22D77BC6000473E5 /* FlickrObjectsLoadingService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrObjectsLoadingService.h; sourceTree = "<group>"; };
+		7813322E22D77BC6000473E5 /* FlickrObjectsLoadingService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrObjectsLoadingService.m; sourceTree = "<group>"; };
+		7813323022D78382000473E5 /* FlickrObjectsLoadingRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrObjectsLoadingRoute.h; sourceTree = "<group>"; };
+		7813323122D78382000473E5 /* FlickrObjectsLoadingRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrObjectsLoadingRoute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +263,7 @@
 		781331F822D74FB0000473E5 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				7813322C22D77BA4000473E5 /* Service */,
 				781331FA22D74FDB000473E5 /* Protocol */,
 				7813320322D753C3000473E5 /* Interactor */,
 				781331FF22D751A1000473E5 /* View */,
@@ -305,6 +324,7 @@
 		7813321822D762BB000473E5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7813321F22D77148000473E5 /* Networking */,
 				7813321922D762D0000473E5 /* Extensions */,
 			);
 			path = Common;
@@ -315,8 +335,34 @@
 			children = (
 				7813321A22D762E6000473E5 /* UIViewController+Storyboard.h */,
 				7813321B22D762E6000473E5 /* UIViewController+Storyboard.m */,
+				7813322722D77841000473E5 /* NSArray+HOF.h */,
+				7813322622D77841000473E5 /* NSArray+HOF.m */,
+				7813322922D77958000473E5 /* NSDictionary+URLQueryItem.h */,
+				7813322A22D77958000473E5 /* NSDictionary+URLQueryItem.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7813321F22D77148000473E5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7813322322D77226000473E5 /* NetworkingRouteProviding.h */,
+				7813322422D77632000473E5 /* NetworkingRouteProviding.m */,
+				7813322022D77165000473E5 /* NetworkingTransport.h */,
+				7813322122D77165000473E5 /* NetworkingTransport.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7813322C22D77BA4000473E5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7813323022D78382000473E5 /* FlickrObjectsLoadingRoute.h */,
+				7813323122D78382000473E5 /* FlickrObjectsLoadingRoute.m */,
+				7813322D22D77BC6000473E5 /* FlickrObjectsLoadingService.h */,
+				7813322E22D77BC6000473E5 /* FlickrObjectsLoadingService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +495,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7813322B22D77958000473E5 /* NSDictionary+URLQueryItem.m in Sources */,
+				7813322F22D77BC6000473E5 /* FlickrObjectsLoadingService.m in Sources */,
 				781331B622D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld in Sources */,
+				7813322222D77165000473E5 /* NetworkingTransport.m in Sources */,
 				781331F722D74B73000473E5 /* AppCoordinator.m in Sources */,
 				781331F122D7465F000473E5 /* AppAssembly.m in Sources */,
 				7813321022D75ED9000473E5 /* ListInteractor+ViewOutput.m in Sources */,
@@ -457,7 +506,10 @@
 				7813321C22D762E6000473E5 /* UIViewController+Storyboard.m in Sources */,
 				781331F422D74AEF000473E5 /* AppCoordinator+SplitViewControllerDelegate.m in Sources */,
 				7813321722D7615D000473E5 /* ListInteractor+ModuleInput.m in Sources */,
+				7813322822D77841000473E5 /* NSArray+HOF.m in Sources */,
+				7813323222D78382000473E5 /* FlickrObjectsLoadingRoute.m in Sources */,
 				7813321322D76053000473E5 /* ListTableViewController+ViewInput.m in Sources */,
+				7813322522D77632000473E5 /* NetworkingRouteProviding.m in Sources */,
 				781331AD22D64BD5000473E5 /* AppDelegate.m in Sources */,
 				7813320622D753F9000473E5 /* ListInteractor.m in Sources */,
 				7813320222D7539C000473E5 /* ListTableViewController.m in Sources */,

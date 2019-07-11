@@ -8,10 +8,12 @@
 
 #import "ListInteractor.h"
 #import "ListViewInput.h"
+#import "FlickrObjectsLoadingService.h"
 
 @interface ListInteractor()
 
 @property (nonatomic, weak) id<ListViewInput> view;
+@property (nonatomic, strong) FlickrObjectsLoadingService *objectsLoadingService;
 
 @end
 
@@ -19,9 +21,10 @@
 
 #pragma mark - Object
 
-- (instancetype)initWithView:(id <ListViewInput>) listViewInput {
+- (instancetype)initWithView:(id <ListViewInput>) listViewInput objectsLoadingService:(FlickrObjectsLoadingService *)objectsLoadingService {
     if (self = [super init]) {
         _view = listViewInput;
+        _objectsLoadingService = objectsLoadingService;
     }
 
     return self;

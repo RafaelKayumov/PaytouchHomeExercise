@@ -12,6 +12,8 @@
 #import "ListInteractor+ModuleInput.h"
 #import "ListInteractor+ViewOutput.h"
 #import "ListModuleInput.h"
+#import "FlickrObjectsLoadingService.h"
+#import "NetworkingTransport.h"
 
 @interface AppAssembly()
 
@@ -23,7 +25,10 @@
 
 - (UIViewController *)assembleListModuleAndReturnView {
     ListTableViewController *listViewController = [ListTableViewController new];
-    ListInteractor *listInteractor = [[ListInteractor alloc] initWithView: listViewController];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration: NSURLSessionConfiguration.defaultSessionConfiguration];
+    NetworkingTransport *transport = [[NetworkingTransport alloc] initWithSession:session];
+    FlickrObjectsLoadingService* objectsLoadingService = [[FlickrObjectsLoadingService alloc] initWithNetworkingTransport:transport];
+    ListInteractor *listInteractor = [[ListInteractor alloc] initWithView:listViewController objectsLoadingService:objectsLoadingService];
 
     listViewController.output = listInteractor;
     self.listModule = listInteractor;
