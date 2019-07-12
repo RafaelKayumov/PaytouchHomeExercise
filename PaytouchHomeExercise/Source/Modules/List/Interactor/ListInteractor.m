@@ -62,10 +62,17 @@
 - (void)loadData {
     [self.view setRefreshingDisplayed:YES];
     NSManagedObjectContext *backgroundContext = self.coreDataStack.backgroundContext;
-    [self.objectsLoadingService loadObjectsWithCompletion:^(NSArray<NSDictionary *> * _Nullable objects, NSError * _Nullable error) {
-        [self.view setRefreshingDisplayed:NO];
 
-        if (error) { return; }
+    __weak ListInteractor *weakSelf = self;
+    [self.objectsLoadingService loadObjectsWithCompletion:^(NSArray<NSDictionary *> * _Nullable objects, NSError * _Nullable error) {
+        [weakSelf.view setRefreshingDisplayed:NO];
+
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                [weakSelf.view displayError:error];
+            });
+            return;
+        }
 
         [FlickrObject removeAllOnContext:backgroundContext];
         for (NSDictionary *object in objects) {

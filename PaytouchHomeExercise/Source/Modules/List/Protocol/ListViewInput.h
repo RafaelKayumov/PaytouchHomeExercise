@@ -15,6 +15,7 @@
 
 - (void)consumeTransactionBatch:(CacheTransactionBatch *)batch;
 - (void)setRefreshingDisplayed:(BOOL)displayed;
+- (void)displayError:(NSError *)error;
 
 @end
 
