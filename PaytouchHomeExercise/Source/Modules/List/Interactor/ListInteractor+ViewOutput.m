@@ -16,4 +16,9 @@
     [self loadData];
 }
 
+
+- (void)didSelectPlainModel:(FlickrObjectPlain *)flickrObjectPlain {
+    [self onPlainObjectSelection:flickrObjectPlain];
+}
+
 @end

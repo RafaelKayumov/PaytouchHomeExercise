@@ -16,6 +16,8 @@
 #import "CacheTransactionBatch.h"
 #import "FlickrObject+CoreDataProperties.h"
 #import "FlickrObject+Additions.h"
+#import "FlickrObjectPlain.h"
+#import "ListModuleOutput.h"
 
 @interface ListInteractor() <CacheTrackerDelegate>
 
@@ -49,6 +51,10 @@
 
 - (void)startDataTracking {
     [self setupDataTracker];
+}
+
+- (void)onPlainObjectSelection:(FlickrObjectPlain *)flickrObjectPlain {
+    [self.output onFlickrObjectSelection:flickrObjectPlain];
 }
 
 #pragma mark - Methods

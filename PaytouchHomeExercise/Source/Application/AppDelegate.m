@@ -21,10 +21,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     CoreDataStack *coreDataStack = [CoreDataStack new];
     AppAssembly *assembly = [[AppAssembly alloc] initWithCoreDataStack:coreDataStack];
     self.coordinator = [[AppCoordinator alloc] initWithAssembly:assembly];
+    assembly.coordinator = self.coordinator;
     [self.coordinator buildUI];
     
     return YES;

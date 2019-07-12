@@ -10,6 +10,7 @@
 #import "FlickrObjectPlain.h"
 #import "NSDate+Formatting.h"
 #import "NSString+Additions.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface FlickrObjectCell ()
 
@@ -27,6 +28,17 @@
 
     self.titleLabel.hidden = ![self.titleLabel.text hasVisibleSymbols];
     self.subtitleLabel.hidden = ![self.subtitleLabel.text hasVisibleSymbols];
+
+    UIImage *placeholderImage = [UIImage imageNamed:@"ImagePlaceholder"];
+    if (flickrObjectPlain.mediaLink) {
+        [self.mediaImageView sd_setImageWithURL:flickrObjectPlain.mediaLink placeholderImage:placeholderImage];
+    } else {
+        self.mediaImageView.image = placeholderImage;
+    }
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
 }
 
 @end

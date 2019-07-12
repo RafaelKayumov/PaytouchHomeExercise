@@ -8,10 +8,14 @@
 
 #import "ViewOutput.h"
 
+@class FlickrObjectPlain;
+
 #ifndef ListViewOutput_h
 #define ListViewOutput_h
 
 @protocol ListViewOutput <ViewOutput>
+
+- (void)didSelectPlainModel:(FlickrObjectPlain *)flickrObjectPlain;
 
 @end
 

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppCoordinator: NSObject
 
+@property (nonatomic, strong, readonly) AppAssembly *assembly;
+
 - (instancetype)initWithAssembly:(AppAssembly *)assembly;
 - (void)buildUI;
 

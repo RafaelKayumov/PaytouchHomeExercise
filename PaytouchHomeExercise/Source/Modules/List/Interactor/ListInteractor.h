@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@protocol ListViewInput, ObjectsFactoryProtocol, ListModuleOutput;
+@class FlickrObjectsLoadingService, CoreDataStack, FlickrObjectPlain;
 
-@protocol ListViewInput, ObjectsFactoryProtocol;
-@class FlickrObjectsLoadingService, CoreDataStack;
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ListInteractor : NSObject
 
+@property (nonatomic, weak) id<ListModuleOutput> output;
 @property (nonatomic, strong, readonly) FlickrObjectsLoadingService *objectsLoadingService;
 
 - (instancetype)initWithView:(id <ListViewInput>) listViewInput
@@ -23,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
                coreDataStack:(CoreDataStack *)coreDataStack;
 - (void)startDataTracking;
 - (void)loadData;
+- (void)onPlainObjectSelection:(FlickrObjectPlain *)flickrObjectPlain;
 
 @end
 

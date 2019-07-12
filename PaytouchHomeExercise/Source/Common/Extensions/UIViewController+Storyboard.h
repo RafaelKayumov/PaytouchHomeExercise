@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (Storyboard)
 
++ (instancetype)instantiateFromStoryboard;
+
 @end
 
 NS_ASSUME_NONNULL_END

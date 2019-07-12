@@ -11,7 +11,7 @@
 
 @implementation UIViewController (Storyboard)
 
-- (instancetype)instantiateFromStoryboard {
++ (instancetype)instantiateFromStoryboard {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:NSStringFromClass(self.class) bundle:nil];
     return storyboard.instantiateInitialViewController;
 }

@@ -35,9 +35,10 @@
     window.backgroundColor = [UIColor clearColor];
 
     UIViewController *listModuleView = [self prepareListModuleView];
+    UIViewController *detailsModuleView = [self prepareDetailsModuleView];
 
     UISplitViewController *splitViewController = [UISplitViewController new];
-    splitViewController.viewControllers = @[listModuleView, [UIViewController new]];
+    splitViewController.viewControllers = @[listModuleView, detailsModuleView];
     splitViewController.delegate = self;
 
     window.rootViewController = splitViewController;
@@ -51,6 +52,10 @@
 
 - (UIViewController *)prepareListModuleView {
     return [self.assembly assembleListModuleAndReturnView];
+}
+
+- (UIViewController *)prepareDetailsModuleView {
+    return [self.assembly assembleDetailsModuleAndReturnView];
 }
 
 @end
