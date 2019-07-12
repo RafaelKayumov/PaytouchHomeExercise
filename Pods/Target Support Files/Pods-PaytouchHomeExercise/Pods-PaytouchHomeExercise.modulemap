@@ -1,0 +1,6 @@
+framework module Pods_PaytouchHomeExercise {
+  umbrella header "Pods-PaytouchHomeExercise-umbrella.h"
+
+  export *
+  module * { export * }
+}
