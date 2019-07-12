@@ -31,7 +31,7 @@ NSString *const kItems = @"items";
 }
 
 - (void)loadObjectsWithCompletion:(FlickrObjectsLoadingCompletion)completion {
-    FlickrObjectsLoadingRoute *route = [[FlickrObjectsLoadingRoute alloc] init];
+    FlickrObjectsLoadingRoute *route = [[FlickrObjectsLoadingRoute alloc] initWithRouteType:FlickrObjectsLoadingRouteTypeList];
     self.dataTask = [self.networkingTransport queryRoute:route completion:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error || !data) {
             completion(nil, error);

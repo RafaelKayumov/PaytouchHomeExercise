@@ -7,6 +7,12 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OHHTTPStubs/OHHTTPStubs.h>
+#import "FlickrObjectsLoadingRoute.h"
+#import "NSURL+Equivalence.h"
+#import "XCTest+Stubs.h"
+#import "XCUIApplication+Tests.h"
+#import "TestingConstants.h"
 
 @interface PaytouchHomeExerciseUITests : XCTestCase
 
@@ -15,24 +21,40 @@
 @implementation PaytouchHomeExerciseUITests
 
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-
-    // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
-
-    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
-
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    [[[XCUIApplication alloc] init] launchWithTestStubs];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testDisplayedData {
+    XCUIApplication *application = [[XCUIApplication alloc] init];
+
+    XCUIElement *table = application.tables[kObjectsTableAccessibilityId];
+
+    XCUIElement *firstObjectCell = [table.cells elementBoundByIndex:0];
+    XCUIElement *secondObjectCell = [table.cells elementBoundByIndex:1];
+    XCUIElement *thirdObjectCell = [table.cells elementBoundByIndex:2];
+
+    XCUIElement *firstObjectTitle = firstObjectCell.staticTexts[kFirstObjectTitle];
+    XCUIElement *secondObjectTitle = secondObjectCell.staticTexts[kSecondObjectTitle];
+    XCUIElement *thirdObjectTitle = thirdObjectCell.staticTexts[kThirdObjectTitle];
+
+    NSPredicate *objectDisplayed = [NSPredicate predicateWithFormat:@"exists == true"];
+
+    XCTestExpectation *firstObjectExistenceExpectation = [self expectationForPredicate:objectDisplayed evaluatedWithObject:firstObjectTitle handler:nil];
+    XCTestExpectation *secondObjectExistenceExpectation = [self expectationForPredicate:objectDisplayed evaluatedWithObject:secondObjectTitle handler:nil];
+    XCTestExpectation *thirdObjectExistenceExpectation = [self expectationForPredicate:objectDisplayed evaluatedWithObject:thirdObjectTitle handler:nil];
+
+    [self waitForExpectations:@[firstObjectExistenceExpectation, secondObjectExistenceExpectation, thirdObjectExistenceExpectation] timeout:5];
+
+    [firstObjectCell tap];
+
+    XCUIElement *firstObjectDescription = application.staticTexts[kFirstObjectDescription];
+    XCTestExpectation *firstObjectDescriptionExpectation = [self expectationForPredicate:objectDisplayed evaluatedWithObject:firstObjectDescription handler:nil];
+
+    [self waitForExpectations:@[firstObjectDescriptionExpectation] timeout:3];
 }
 
 @end

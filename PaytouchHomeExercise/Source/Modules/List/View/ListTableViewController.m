@@ -11,6 +11,7 @@
 #import "CacheTransactionBatch.h"
 #import "FlickrObjectPlain.h"
 #import "FlickrObjectCell.h"
+#import "TestingConstants.h"
 
 @interface ListTableViewController ()
 
@@ -34,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.tableView.accessibilityIdentifier = kObjectsTableAccessibilityId;
 
     NSString *cellClassName = NSStringFromClass(FlickrObjectCell.class);
     [self.tableView registerNib:[UINib nibWithNibName:cellClassName bundle:nil] forCellReuseIdentifier:cellClassName];

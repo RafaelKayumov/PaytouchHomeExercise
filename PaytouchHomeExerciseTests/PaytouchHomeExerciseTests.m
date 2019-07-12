@@ -7,6 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NetworkingTransport.h"
+#import "FlickrObjectsLoadingService.h"
+#import <OHHTTPStubs/OHHTTPStubs.h>
+#import "FlickrObjectsLoadingRoute.h"
+#import "NSURL+Equivalence.h"
+#import "XCTest+Stubs.h"
+#import "TestingConstants.h"
 
 @interface PaytouchHomeExerciseTests : XCTestCase
 
@@ -15,23 +22,28 @@
 @implementation PaytouchHomeExerciseTests
 
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    [self stubNetworkingWithDataBundle:[NSBundle bundleForClass:self.class]];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [self disableNetworkingStubs];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
+- (void)testFlickrObjectsService {
+    NSURLSession *session = [NSURLSession sessionWithConfiguration: NSURLSessionConfiguration.defaultSessionConfiguration];
+    NetworkingTransport *transport = [[NetworkingTransport alloc] initWithSession:session];
+    FlickrObjectsLoadingService *objectsLoadingService = [[FlickrObjectsLoadingService alloc] initWithNetworkingTransport:transport];
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+    XCTestExpectation *objectsExpectation = [[XCTestExpectation alloc] initWithDescription:@"Fetch object list"];
+    NSString *titleKey = @"title";
+    [objectsLoadingService loadObjectsWithCompletion:^(NSArray<NSDictionary *> * _Nullable objectDictionaries, NSError * _Nullable error) {
+        XCTAssertTrue([objectDictionaries[0][titleKey] isEqualToString:kFirstObjectTitle]);
+        XCTAssertTrue([objectDictionaries[1][titleKey] isEqualToString:kSecondObjectTitle]);
+        XCTAssertTrue([objectDictionaries[2][titleKey] isEqualToString:kThirdObjectTitle]);
+        [objectsExpectation fulfill];
     }];
+
+    [self waitForExpectations:@[objectsExpectation] timeout:5];
 }
 
 @end

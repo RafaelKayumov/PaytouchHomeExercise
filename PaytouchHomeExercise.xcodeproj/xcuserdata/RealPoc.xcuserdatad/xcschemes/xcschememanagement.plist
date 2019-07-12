@@ -7,7 +7,37 @@
 		<key>PaytouchHomeExercise.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>0</integer>
+		</dict>
+		<key>PaytouchHomeExerciseTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>PaytouchHomeExerciseUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>781331A722D64BD5000473E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>781331C222D64BD6000473E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>781331CD22D64BD7000473E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

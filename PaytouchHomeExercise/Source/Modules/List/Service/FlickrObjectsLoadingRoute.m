@@ -15,7 +15,7 @@ NSString *const kFlickrObjectsListPath = @"/services/feeds/photos_public.gne";
 
 #pragma mark - Object
 
-- (instancetype) initWithRouteType:(FlickrObjectsLoadingRouteType)routeType {
+- (instancetype)initWithRouteType:(FlickrObjectsLoadingRouteType)routeType {
     if (self = [super init]) {
         _routeType = routeType;
     }

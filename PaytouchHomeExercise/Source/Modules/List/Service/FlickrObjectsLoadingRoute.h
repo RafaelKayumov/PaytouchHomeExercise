@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, FlickrObjectsLoadingRouteType) {
 
 @property (nonatomic) FlickrObjectsLoadingRouteType routeType;
 
+- (instancetype)initWithRouteType:(FlickrObjectsLoadingRouteType)routeType;
+
 @end
 
 NS_ASSUME_NONNULL_END

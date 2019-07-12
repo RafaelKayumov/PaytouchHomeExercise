@@ -51,6 +51,26 @@
 		7887D33022D8CA1E0053D67D /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7887D32F22D8CA1E0053D67D /* DetailsViewController.storyboard */; };
 		7887D33222D8CB400053D67D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7887D33122D8CB400053D67D /* WebKit.framework */; };
 		7887D33622D8CC1F0053D67D /* AppCoordinator+ListModuleOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D33522D8CC1F0053D67D /* AppCoordinator+ListModuleOutput.m */; };
+		7887D33B22D8E7470053D67D /* FlickrObjectsLoadingRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813323122D78382000473E5 /* FlickrObjectsLoadingRoute.m */; };
+		7887D33E22D8E8420053D67D /* NSURL+Equivalence.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D33D22D8E8420053D67D /* NSURL+Equivalence.m */; };
+		7887D33F22D8E8420053D67D /* NSURL+Equivalence.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D33D22D8E8420053D67D /* NSURL+Equivalence.m */; };
+		7887D34222D8EA980053D67D /* ResponseStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 7887D34122D8EA980053D67D /* ResponseStub.json */; };
+		7887D34322D8EB9A0053D67D /* NetworkingRouteProviding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322422D77632000473E5 /* NetworkingRouteProviding.m */; };
+		7887D34422D8FC810053D67D /* FlickrObjectsLoadingRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813323122D78382000473E5 /* FlickrObjectsLoadingRoute.m */; };
+		7887D34522D8FD310053D67D /* NetworkingTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322122D77165000473E5 /* NetworkingTransport.m */; };
+		7887D34622D8FD4A0053D67D /* FlickrObjectsLoadingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813322E22D77BC6000473E5 /* FlickrObjectsLoadingService.m */; };
+		7887D34722D8FF0B0053D67D /* ResponseStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 7887D34122D8EA980053D67D /* ResponseStub.json */; };
+		7887D34D22D9005B0053D67D /* XCTest+Stubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D34C22D9005B0053D67D /* XCTest+Stubs.m */; };
+		7887D34E22D9005B0053D67D /* XCTest+Stubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D34C22D9005B0053D67D /* XCTest+Stubs.m */; };
+		7887D35522D903FA0053D67D /* XCUIApplication+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35022D903EC0053D67D /* XCUIApplication+Tests.m */; };
+		7887D35822D904190053D67D /* OHHTTPStubs+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35722D904190053D67D /* OHHTTPStubs+Additions.m */; };
+		7887D35922D904190053D67D /* OHHTTPStubs+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35722D904190053D67D /* OHHTTPStubs+Additions.m */; };
+		7887D35A22D904980053D67D /* OHHTTPStubs+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35722D904190053D67D /* OHHTTPStubs+Additions.m */; };
+		7887D35D22D906330053D67D /* TestingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35C22D906330053D67D /* TestingConstants.m */; };
+		7887D35E22D9069D0053D67D /* TestingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35C22D906330053D67D /* TestingConstants.m */; };
+		7887D36122D908740053D67D /* AppDelegate+Stubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D36022D908740053D67D /* AppDelegate+Stubs.m */; };
+		7887D36222D909C50053D67D /* ResponseStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 7887D34122D8EA980053D67D /* ResponseStub.json */; };
+		7887D36322D90D810053D67D /* TestingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D35C22D906330053D67D /* TestingConstants.m */; };
 		C4109B9B30DC710109CDFFF1 /* Pods_PaytouchHomeExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3478C8646CF2DECE3E2CB34E /* Pods_PaytouchHomeExercise.framework */; };
 		F1AC61994CAA1BC4FBC70B58 /* Pods_PaytouchHomeExerciseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6329AD61E31F444DBC7A1C93 /* Pods_PaytouchHomeExerciseUITests.framework */; };
 /* End PBXBuildFile section */
@@ -170,6 +190,19 @@
 		7887D33322D8CB890053D67D /* ListModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListModuleOutput.h; sourceTree = "<group>"; };
 		7887D33422D8CC1F0053D67D /* AppCoordinator+ListModuleOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppCoordinator+ListModuleOutput.h"; sourceTree = "<group>"; };
 		7887D33522D8CC1F0053D67D /* AppCoordinator+ListModuleOutput.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppCoordinator+ListModuleOutput.m"; sourceTree = "<group>"; };
+		7887D33C22D8E8420053D67D /* NSURL+Equivalence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Equivalence.h"; sourceTree = "<group>"; };
+		7887D33D22D8E8420053D67D /* NSURL+Equivalence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Equivalence.m"; sourceTree = "<group>"; };
+		7887D34122D8EA980053D67D /* ResponseStub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ResponseStub.json; sourceTree = "<group>"; };
+		7887D34B22D9005B0053D67D /* XCTest+Stubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCTest+Stubs.h"; sourceTree = "<group>"; };
+		7887D34C22D9005B0053D67D /* XCTest+Stubs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XCTest+Stubs.m"; sourceTree = "<group>"; };
+		7887D34F22D903EC0053D67D /* XCUIApplication+Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XCUIApplication+Tests.h"; sourceTree = "<group>"; };
+		7887D35022D903EC0053D67D /* XCUIApplication+Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XCUIApplication+Tests.m"; sourceTree = "<group>"; };
+		7887D35622D904190053D67D /* OHHTTPStubs+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs+Additions.h"; sourceTree = "<group>"; };
+		7887D35722D904190053D67D /* OHHTTPStubs+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OHHTTPStubs+Additions.m"; sourceTree = "<group>"; };
+		7887D35B22D906140053D67D /* TestingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingConstants.h; sourceTree = "<group>"; };
+		7887D35C22D906330053D67D /* TestingConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingConstants.m; sourceTree = "<group>"; };
+		7887D35F22D908740053D67D /* AppDelegate+Stubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Stubs.h"; sourceTree = "<group>"; };
+		7887D36022D908740053D67D /* AppDelegate+Stubs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Stubs.m"; sourceTree = "<group>"; };
 		95F4A9B60C242788C73358BF /* Pods-PaytouchHomeExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaytouchHomeExerciseTests.release.xcconfig"; path = "Target Support Files/Pods-PaytouchHomeExerciseTests/Pods-PaytouchHomeExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCCF176D1DDB73A381BCFA85 /* Pods-PaytouchHomeExerciseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaytouchHomeExerciseUITests.release.xcconfig"; path = "Target Support Files/Pods-PaytouchHomeExerciseUITests/Pods-PaytouchHomeExerciseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7D423D178E95AD23FFFE093 /* Pods-PaytouchHomeExerciseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaytouchHomeExerciseUITests.debug.xcconfig"; path = "Target Support Files/Pods-PaytouchHomeExerciseUITests/Pods-PaytouchHomeExerciseUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,9 +268,11 @@
 				781331AA22D64BD5000473E5 /* PaytouchHomeExercise */,
 				781331C622D64BD7000473E5 /* PaytouchHomeExerciseTests */,
 				781331D122D64BD7000473E5 /* PaytouchHomeExerciseUITests */,
+				7887D34922D9002D0053D67D /* Common */,
 				781331A922D64BD5000473E5 /* Products */,
 				46AC620BDCBFB793854AB0D5 /* Pods */,
 				16D13462FE18FE567994BB27 /* Frameworks */,
+				7887D34022D8E97C0053D67D /* DataAssets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +309,10 @@
 		781331D122D64BD7000473E5 /* PaytouchHomeExerciseUITests */ = {
 			isa = PBXGroup;
 			children = (
+				7887D34F22D903EC0053D67D /* XCUIApplication+Tests.h */,
+				7887D35022D903EC0053D67D /* XCUIApplication+Tests.m */,
+				7887D35B22D906140053D67D /* TestingConstants.h */,
+				7887D35C22D906330053D67D /* TestingConstants.m */,
 				781331D222D64BD7000473E5 /* PaytouchHomeExerciseUITests.m */,
 				781331D422D64BD7000473E5 /* Info.plist */,
 			);
@@ -306,6 +345,8 @@
 				781331BD22D64BD6000473E5 /* main.m */,
 				781331AB22D64BD5000473E5 /* AppDelegate.h */,
 				781331AC22D64BD5000473E5 /* AppDelegate.m */,
+				7887D35F22D908740053D67D /* AppDelegate+Stubs.h */,
+				7887D36022D908740053D67D /* AppDelegate+Stubs.m */,
 				781331B922D64BD6000473E5 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
@@ -460,6 +501,8 @@
 				7887D31322D8A36A0053D67D /* NSDate+Formatting.m */,
 				7887D31A22D8AC410053D67D /* NSString+Additions.h */,
 				7887D31B22D8AC410053D67D /* NSString+Additions.m */,
+				7887D33C22D8E8420053D67D /* NSURL+Equivalence.h */,
+				7887D33D22D8E8420053D67D /* NSURL+Equivalence.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -568,6 +611,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7887D34022D8E97C0053D67D /* DataAssets */ = {
+			isa = PBXGroup;
+			children = (
+				7887D34122D8EA980053D67D /* ResponseStub.json */,
+			);
+			path = DataAssets;
+			sourceTree = "<group>";
+		};
+		7887D34922D9002D0053D67D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7887D34B22D9005B0053D67D /* XCTest+Stubs.h */,
+				7887D34C22D9005B0053D67D /* XCTest+Stubs.m */,
+				7887D35622D904190053D67D /* OHHTTPStubs+Additions.h */,
+				7887D35722D904190053D67D /* OHHTTPStubs+Additions.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -598,6 +660,7 @@
 				781331BF22D64BD6000473E5 /* Sources */,
 				781331C022D64BD6000473E5 /* Frameworks */,
 				781331C122D64BD6000473E5 /* Resources */,
+				8D9B09C2DD75EC04A059FD84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -617,6 +680,7 @@
 				781331CA22D64BD7000473E5 /* Sources */,
 				781331CB22D64BD7000473E5 /* Frameworks */,
 				781331CC22D64BD7000473E5 /* Resources */,
+				F4C10F706F9413C07D3B80C6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -677,6 +741,7 @@
 			files = (
 				7887D33022D8CA1E0053D67D /* DetailsViewController.storyboard in Resources */,
 				781331BB22D64BD6000473E5 /* LaunchScreen.storyboard in Resources */,
+				7887D36222D909C50053D67D /* ResponseStub.json in Resources */,
 				781331B822D64BD6000473E5 /* Assets.xcassets in Resources */,
 				7887D31922D8A8D30053D67D /* FlickrObjectCell.xib in Resources */,
 			);
@@ -686,6 +751,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7887D34722D8FF0B0053D67D /* ResponseStub.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +759,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7887D34222D8EA980053D67D /* ResponseStub.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +786,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D9B09C2DD75EC04A059FD84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaytouchHomeExerciseTests/Pods-PaytouchHomeExerciseTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaytouchHomeExerciseTests/Pods-PaytouchHomeExerciseTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaytouchHomeExerciseTests/Pods-PaytouchHomeExerciseTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B41628262CF2F6F1728B5D96 /* [CP] Embed Pods Frameworks */ = {
@@ -782,6 +866,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F4C10F706F9413C07D3B80C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaytouchHomeExerciseUITests/Pods-PaytouchHomeExerciseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaytouchHomeExerciseUITests/Pods-PaytouchHomeExerciseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaytouchHomeExerciseUITests/Pods-PaytouchHomeExerciseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -816,6 +917,8 @@
 				7887D31822D8A8D30053D67D /* FlickrObjectCell.m in Sources */,
 				7813322822D77841000473E5 /* NSArray+HOF.m in Sources */,
 				7887D32822D8C4920053D67D /* DetailsViewController.m in Sources */,
+				7887D33E22D8E8420053D67D /* NSURL+Equivalence.m in Sources */,
+				7887D35E22D9069D0053D67D /* TestingConstants.m in Sources */,
 				7813323222D78382000473E5 /* FlickrObjectsLoadingRoute.m in Sources */,
 				7813321322D76053000473E5 /* ListTableViewController+ViewInput.m in Sources */,
 				7813325E22D7BF5A000473E5 /* FlickrObjectFactory.m in Sources */,
@@ -823,7 +926,9 @@
 				781331AD22D64BD5000473E5 /* AppDelegate.m in Sources */,
 				7813320622D753F9000473E5 /* ListInteractor.m in Sources */,
 				7813324D22D7ACB0000473E5 /* CacheRequest.m in Sources */,
+				7887D35A22D904980053D67D /* OHHTTPStubs+Additions.m in Sources */,
 				7887D32E22D8C7000053D67D /* DetailsInteractor+ModuleInput.m in Sources */,
+				7887D36122D908740053D67D /* AppDelegate+Stubs.m in Sources */,
 				7813320222D7539C000473E5 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,7 +937,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7887D35822D904190053D67D /* OHHTTPStubs+Additions.m in Sources */,
+				7887D34622D8FD4A0053D67D /* FlickrObjectsLoadingService.m in Sources */,
+				7887D34D22D9005B0053D67D /* XCTest+Stubs.m in Sources */,
+				7887D34422D8FC810053D67D /* FlickrObjectsLoadingRoute.m in Sources */,
+				7887D34522D8FD310053D67D /* NetworkingTransport.m in Sources */,
 				781331C822D64BD7000473E5 /* PaytouchHomeExerciseTests.m in Sources */,
+				7887D36322D90D810053D67D /* TestingConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,7 +951,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7887D33B22D8E7470053D67D /* FlickrObjectsLoadingRoute.m in Sources */,
+				7887D35522D903FA0053D67D /* XCUIApplication+Tests.m in Sources */,
+				7887D34E22D9005B0053D67D /* XCTest+Stubs.m in Sources */,
 				781331D322D64BD7000473E5 /* PaytouchHomeExerciseUITests.m in Sources */,
+				7887D34322D8EB9A0053D67D /* NetworkingRouteProviding.m in Sources */,
+				7887D35922D904190053D67D /* OHHTTPStubs+Additions.m in Sources */,
+				7887D35D22D906330053D67D /* TestingConstants.m in Sources */,
+				7887D33F22D8E8420053D67D /* NSURL+Equivalence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

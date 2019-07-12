@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<ListModuleOutput> output;
 @property (nonatomic, strong, readonly) FlickrObjectsLoadingService *objectsLoadingService;
 
-- (instancetype)initWithView:(id <ListViewInput>) listViewInput
+- (instancetype)initWithView:(id <ListViewInput>)listViewInput
        objectsLoadingService:(FlickrObjectsLoadingService *)objectsLoadingService
          plainObjectsFactory:(id<ObjectsFactoryProtocol>)plainObjectsFactory
                coreDataStack:(CoreDataStack *)coreDataStack;

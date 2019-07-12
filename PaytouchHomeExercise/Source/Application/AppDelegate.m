@@ -10,6 +10,7 @@
 #import "AppCoordinator.h"
 #import "AppAssembly.h"
 #import "CoreDataStack.h"
+#import "AppDelegate+Stubs.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self applyNetworkingStubsIfNeeded];
+    [self disableAnimationsIfNeeded];
+
     CoreDataStack *coreDataStack = [CoreDataStack new];
     AppAssembly *assembly = [[AppAssembly alloc] initWithCoreDataStack:coreDataStack];
     self.coordinator = [[AppCoordinator alloc] initWithAssembly:assembly];
