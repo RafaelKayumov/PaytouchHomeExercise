@@ -40,6 +40,10 @@
 		7813326122D7BFD9000473E5 /* FlickrObjectPlain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813326022D7BFD9000473E5 /* FlickrObjectPlain.m */; };
 		7813326D22D7CDA6000473E5 /* FlickrObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813326C22D7CDA6000473E5 /* FlickrObject+Additions.m */; };
 		7813327022D7D13D000473E5 /* NSManagedObjectContext+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7813326F22D7D13D000473E5 /* NSManagedObjectContext+Additions.m */; };
+		7887D31422D8A36A0053D67D /* NSDate+Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D31322D8A36A0053D67D /* NSDate+Formatting.m */; };
+		7887D31822D8A8D30053D67D /* FlickrObjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D31622D8A8D30053D67D /* FlickrObjectCell.m */; };
+		7887D31922D8A8D30053D67D /* FlickrObjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7887D31722D8A8D30053D67D /* FlickrObjectCell.xib */; };
+		7887D31C22D8AC410053D67D /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7887D31B22D8AC410053D67D /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +135,13 @@
 		7813326C22D7CDA6000473E5 /* FlickrObject+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FlickrObject+Additions.m"; sourceTree = "<group>"; };
 		7813326E22D7D13D000473E5 /* NSManagedObjectContext+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Additions.h"; sourceTree = "<group>"; };
 		7813326F22D7D13D000473E5 /* NSManagedObjectContext+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Additions.m"; sourceTree = "<group>"; };
+		7887D31222D8A36A0053D67D /* NSDate+Formatting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatting.h"; sourceTree = "<group>"; };
+		7887D31322D8A36A0053D67D /* NSDate+Formatting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatting.m"; sourceTree = "<group>"; };
+		7887D31522D8A8D20053D67D /* FlickrObjectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrObjectCell.h; sourceTree = "<group>"; };
+		7887D31622D8A8D30053D67D /* FlickrObjectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrObjectCell.m; sourceTree = "<group>"; };
+		7887D31722D8A8D30053D67D /* FlickrObjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlickrObjectCell.xib; sourceTree = "<group>"; };
+		7887D31A22D8AC410053D67D /* NSString+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		7887D31B22D8AC410053D67D /* NSString+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +343,7 @@
 		781331FF22D751A1000473E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7887D30E22D8A2BF0053D67D /* Cell */,
 				7813320022D7539C000473E5 /* ListTableViewController.h */,
 				7813320122D7539C000473E5 /* ListTableViewController.m */,
 				7813321122D76053000473E5 /* ListTableViewController+ViewInput.h */,
@@ -377,6 +389,10 @@
 				7813325422D7B916000473E5 /* NSBundle+Additions.m */,
 				7813326E22D7D13D000473E5 /* NSManagedObjectContext+Additions.h */,
 				7813326F22D7D13D000473E5 /* NSManagedObjectContext+Additions.m */,
+				7887D31222D8A36A0053D67D /* NSDate+Formatting.h */,
+				7887D31322D8A36A0053D67D /* NSDate+Formatting.m */,
+				7887D31A22D8AC410053D67D /* NSString+Additions.h */,
+				7887D31B22D8AC410053D67D /* NSString+Additions.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +457,16 @@
 				7813324522D7ACAF000473E5 /* ObjectsFactoryProtocol.h */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7887D30E22D8A2BF0053D67D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7887D31522D8A8D20053D67D /* FlickrObjectCell.h */,
+				7887D31622D8A8D30053D67D /* FlickrObjectCell.m */,
+				7887D31722D8A8D30053D67D /* FlickrObjectCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,6 +575,7 @@
 				7813321E22D7642D000473E5 /* ListTableViewController.storyboard in Resources */,
 				781331BB22D64BD6000473E5 /* LaunchScreen.storyboard in Resources */,
 				781331B822D64BD6000473E5 /* Assets.xcassets in Resources */,
+				7887D31922D8A8D30053D67D /* FlickrObjectCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +603,7 @@
 				7813322B22D77958000473E5 /* NSDictionary+URLQueryItem.m in Sources */,
 				7813322F22D77BC6000473E5 /* FlickrObjectsLoadingService.m in Sources */,
 				7813324B22D7ACB0000473E5 /* CacheTransactionBatch.m in Sources */,
+				7887D31422D8A36A0053D67D /* NSDate+Formatting.m in Sources */,
 				7813326D22D7CDA6000473E5 /* FlickrObject+Additions.m in Sources */,
 				781331B622D64BD5000473E5 /* PaytouchHomeExercise.xcdatamodeld in Sources */,
 				7813324C22D7ACB0000473E5 /* CacheTracker.m in Sources */,
@@ -584,6 +612,7 @@
 				781331F122D7465F000473E5 /* AppAssembly.m in Sources */,
 				7813327022D7D13D000473E5 /* NSManagedObjectContext+Additions.m in Sources */,
 				7813321022D75ED9000473E5 /* ListInteractor+ViewOutput.m in Sources */,
+				7887D31C22D8AC410053D67D /* NSString+Additions.m in Sources */,
 				781331BE22D64BD6000473E5 /* main.m in Sources */,
 				7813321C22D762E6000473E5 /* UIViewController+Storyboard.m in Sources */,
 				7813325222D7B65B000473E5 /* CoreDataStack.m in Sources */,
@@ -592,6 +621,7 @@
 				7813321722D7615D000473E5 /* ListInteractor+ModuleInput.m in Sources */,
 				7813324E22D7ACB0000473E5 /* CacheTransaction.m in Sources */,
 				7813326122D7BFD9000473E5 /* FlickrObjectPlain.m in Sources */,
+				7887D31822D8A8D30053D67D /* FlickrObjectCell.m in Sources */,
 				7813322822D77841000473E5 /* NSArray+HOF.m in Sources */,
 				7813323222D78382000473E5 /* FlickrObjectsLoadingRoute.m in Sources */,
 				7813321322D76053000473E5 /* ListTableViewController+ViewInput.m in Sources */,

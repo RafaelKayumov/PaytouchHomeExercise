@@ -10,6 +10,7 @@
 #import "CacheTransaction.h"
 #import "CacheTransactionBatch.h"
 #import "FlickrObjectPlain.h"
+#import "FlickrObjectCell.h"
 
 @interface ListTableViewController ()
 
@@ -34,7 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"Cell"];
+    NSString *cellClassName = NSStringFromClass(FlickrObjectCell.class);
+    [self.tableView registerNib:[UINib nibWithNibName:cellClassName bundle:nil] forCellReuseIdentifier:cellClassName];
 
     [self.output onViewReady];
 }
@@ -77,9 +79,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = self.plainObjects[indexPath.row].title;
+    FlickrObjectCell* cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(FlickrObjectCell.class) forIndexPath:indexPath];
+    FlickrObjectPlain *flickrObjectPlain = self.plainObjects[indexPath.row];
+    [cell configureWithFlickrPlainObject:flickrObjectPlain];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
