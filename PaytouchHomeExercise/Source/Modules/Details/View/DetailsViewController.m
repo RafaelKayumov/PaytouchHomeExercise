@@ -11,6 +11,7 @@
 @interface DetailsViewController ()
 
 @property (nonatomic, weak) IBOutlet WKWebView *webView;
+@property (nonatomic, weak) UIRefreshControl *refreshControl;
 
 @end
 

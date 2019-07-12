@@ -14,6 +14,7 @@
 @protocol ListViewInput
 
 - (void)consumeTransactionBatch:(CacheTransactionBatch *)batch;
+- (void)setRefreshingDisplayed:(BOOL)displayed;
 
 @end
 

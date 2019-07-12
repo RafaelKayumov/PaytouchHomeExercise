@@ -60,8 +60,11 @@
 #pragma mark - Methods
 
 - (void)loadData {
+    [self.view setRefreshingDisplayed:YES];
     NSManagedObjectContext *backgroundContext = self.coreDataStack.backgroundContext;
     [self.objectsLoadingService loadObjectsWithCompletion:^(NSArray<NSDictionary *> * _Nullable objects, NSError * _Nullable error) {
+        [self.view setRefreshingDisplayed:NO];
+
         if (error) { return; }
 
         [FlickrObject removeAllOnContext:backgroundContext];
@@ -76,7 +79,7 @@
     CacheRequest* request = [CacheRequest new];
 
     request.entityName = NSStringFromClass([FlickrObject class]);
-    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"dateTaken" ascending:YES]];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"dateTaken" ascending:NO]];
     self.cacheTracker = [CacheTracker cacheTracker:request
                                           delegate:self
                                     objectsFactory:self.plainObjectsFactory

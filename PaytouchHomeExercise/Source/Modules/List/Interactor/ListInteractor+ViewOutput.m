@@ -21,4 +21,8 @@
     [self onPlainObjectSelection:flickrObjectPlain];
 }
 
+- (void)didTriggerRefresh {
+    [self loadData];
+}
+
 @end

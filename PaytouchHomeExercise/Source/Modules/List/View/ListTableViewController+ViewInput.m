@@ -14,4 +14,14 @@
     [self processTransactionBatch:batch];
 }
 
+- (void)setRefreshingDisplayed:(BOOL)displayed {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        if (displayed) {
+            [self.refreshControl beginRefreshing];
+        } else {
+            [self.refreshControl endRefreshing];
+        }
+    });
+}
+
 @end

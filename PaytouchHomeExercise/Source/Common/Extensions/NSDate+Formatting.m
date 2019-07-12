@@ -19,7 +19,7 @@
 }
 
 - (NSString *)detailsString {
-    return [self asStringWithTemplate:@"dMMMHHmm"];
+    return [self asStringWithTemplate:@"yyyy MMM d, h:mm a"];
 }
 
 @end

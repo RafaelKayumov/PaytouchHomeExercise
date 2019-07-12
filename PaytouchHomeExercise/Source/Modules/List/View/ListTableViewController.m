@@ -38,7 +38,23 @@
     NSString *cellClassName = NSStringFromClass(FlickrObjectCell.class);
     [self.tableView registerNib:[UINib nibWithNibName:cellClassName bundle:nil] forCellReuseIdentifier:cellClassName];
 
+    [self setupRefreshControl];
     [self.output onViewReady];
+}
+
+#pragma mark - Private
+
+- (void)setupRefreshControl {
+    if (!self.refreshControl) {
+        UIRefreshControl *refreshControl = [UIRefreshControl new];
+        [refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
+        self.tableView.refreshControl = refreshControl;
+        self.refreshControl = refreshControl;
+    }
+}
+
+- (void)onRefresh {
+    [self.output didTriggerRefresh];
 }
 
 #pragma mark - Methods

@@ -16,6 +16,7 @@
 @protocol ListViewOutput <ViewOutput>
 
 - (void)didSelectPlainModel:(FlickrObjectPlain *)flickrObjectPlain;
+- (void)didTriggerRefresh;
 
 @end
 
